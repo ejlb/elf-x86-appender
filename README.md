@@ -1,15 +1,16 @@
-ELF x86 32bit appender virus in 800b
-====================================
+ELF x86 appender virus in 800b
+===============================
 The virus infects every infectable elf executable in the current directory using [Silvio's](https://en.wikipedia.org/wiki/Silvio_Cesare) classic .text section padding technique. Without debugging symbols it comes in at 800b
 
 * mmap host for improved efficiency 
 * virus length using jmp trick so no bootstrapping
 * overwrites ELF header entry point
+* 32bit only
 
 Compile
 -------
 
-The virus now runs in docker although you do not have to use docker. To compile the image run 
+The virus runs in docker although you do not have to use docker. To compile the image run 
 
 `docker build -t virus .`. 
 
